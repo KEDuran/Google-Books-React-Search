@@ -1,8 +1,6 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 
-function SearchPage() {
-	return <Navbar />;
-}
+function SearchPage() {}
 
 export default SearchPage;
