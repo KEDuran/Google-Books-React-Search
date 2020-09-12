@@ -21,10 +21,10 @@ function Navbar() {
 				<Typography variant="h6" className={classes.title}>
 					Google Books
 				</Typography>
-				<Link href="#" className={classes.link} onClick={preventDefault}>
+				<Link href="/search" className={classes.link} onClick={preventDefault}>
 					Search
 				</Link>
-				<Link href="#" className={classes.link} onClick={preventDefault}>
+				<Link href="/saved" className={classes.link} onClick={preventDefault}>
 					Saved
 				</Link>
 			</Toolbar>
