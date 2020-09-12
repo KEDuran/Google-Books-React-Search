@@ -11,9 +11,8 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// Define API routes here
+// API routes will go here
 
-// Send every other request to the React app
 // Define any API routes before this runs
 app.get("*", (req, res) => {
   console.log("GIVE THEM THE STATIC BUILD");
