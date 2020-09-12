@@ -80,9 +80,9 @@ _Return to TOC - [Table of Contents](#table-of-contents)_
 
 ## New CSS Library
 
-I took the opportunity to practice using another CSS library outside of Bootstrap. For this assignment, I used Chakra for the frontend design of the application. Chakra is a CSS library that is compatible with the React component structure.
+I took the opportunity to practice using another CSS library outside of Bootstrap. For this assignment, I used Carbon for the frontend design of the application. Carbon is a CSS library that is compatible with the React component structure.
 
-Please click on the following link to reference the Chakra documentation - [https://chakra-ui.com/](https://chakra-ui.com/).
+Please click on the following link to reference the Chakra documentation - [hhttps://github.com/carbon-design-system/carbon/tree/master/packages/react](https://github.com/carbon-design-system/carbon/tree/master/packages/react).
 
 _Return to TOC - [Table of Contents](#table-of-contents)_
 
