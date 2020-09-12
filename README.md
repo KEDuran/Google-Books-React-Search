@@ -1,8 +1,18 @@
 # Assignment 21 - Google Books React-Based Search App
 
+![react](https://img.shields.io/badge/library-react.js-purple/?style=plastic&logo=react)
+![GitHub followers](https://img.shields.io/github/followers/KEDuran?logo=GitHub&style=plastic)
+![GitHub language count](https://img.shields.io/github/languages/count/KEDuran/employee_directory?color=orange&logo=GitHub&style=plastic)
+
 ---
 
 ## Table of Contents
+
+- [Description](#description)
+- [Links for Submission Items](#links-for-submission-items)
+- [Assignment Scope](#assignment-scope)
+- [Installation](#installation)
+- [Final Output](#final-output)
 
 ---
 
@@ -30,9 +40,9 @@ Here is a summar of the minimum requirements specified for this application:
 
 - Application must have the following two pages:
 
-  - [Search](Search.png) - In this page, the user can search for books via the Google Books API and render them on this page. User should also have the option to "View" a book (by clicking the view button), bringing them to the book on Google Books, or "Save" a book (by clicking the save button), saving it to the Mongo database.
+  - **Search** - In this page, the user can search for books via the Google Books API and render them on this page. User should also have the option to "View" a book (by clicking the view button), bringing them to the book on Google Books, or "Save" a book (by clicking the save button), saving it to the Mongo database.
 
-  - [Saved](Saved.png) - this page should render all books saved into a backend Mongo database. User should also have the option to "View" a book (by clicking the view button), bringing them to the book on Google Books, or "Delete" a book (by clicking on the delete button), removing it from the Mongo database.
+  - **Saved** - this page should render all books saved into a backend Mongo database. User should also have the option to "View" a book (by clicking the view button), bringing them to the book on Google Books, or "Delete" a book (by clicking on the delete button), removing it from the Mongo database.
 
 - Application should be a SPA (Single Page Application) that uses [`react-router-dom`](https://github.com/reactjs/react-router) to navigate, hide and show your React components without changing the route within Express.
 
@@ -61,7 +71,15 @@ Here is a summar of the minimum requirements specified for this application:
 
 ---
 
-## Installation Instructions
+## New CSS Library
+
+I took the opportunity to practice using another CSS library outside of Bootstrap. For this assignment, I used Chakra for the frontend design of the application. Chakra is a CSS library that is compatible with the React component structure.
+
+Please click on the following link to reference the Chakra documentation - [https://chakra-ui.com/](https://chakra-ui.com/).
+
+---
+
+## Installation
 
 ### Required Technology
 
@@ -77,7 +95,9 @@ All NPM packages needed for this application are already listed as dependencies 
 
 After all required dependencies have been installed using the instructions in the Installation Instructions section, run the command `npm start` in you the terminal under the root directory in order to launch the application.
 
-### Final Output
+---
+
+## Final Output
 
 I have included a brief demo recording to show the application's functionality and responsiveness. The web application's deployed link on Heroku is the source URL for this recording.
 
