@@ -80,9 +80,9 @@ _Return to TOC - [Table of Contents](#table-of-contents)_
 
 ## New CSS Library
 
-I took the opportunity to practice using another CSS library outside of Bootstrap. For this assignment, I used Carbon for the frontend design of the application. IBM Carbon Design System is a CSS library that is compatible with the React component structure.
+I took the opportunity to practice using another CSS library outside of Bootstrap. For this assignment, I used Material UI for the frontend design of the application. Material UI is a CSS library that is compatible with the React component structure.
 
-Please click on the following link to reference the Chakra documentation - [hhttps://github.com/carbon-design-system/carbon/tree/master/packages/react](https://github.com/carbon-design-system/carbon/tree/master/packages/react).
+Please click on the following link to reference the Material documentation - [https://material-ui.com/](https://material-ui.com/).
 
 _Return to TOC - [Table of Contents](#table-of-contents)_
 
