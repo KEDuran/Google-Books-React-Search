@@ -11,12 +11,11 @@ const useStyles = makeStyles((theme) => ({
 		flexGrow: 1,
 	},
 	paper: {
-		padding: "40px",
+        padding: theme.spacing(4),
 		textAlign: "center",
 		color: theme.palette.text.secondary,
 	},
 	card: {
-		minWidth: 275,
         padding: "40px",
         background: "#e8eaf6"
 	},
