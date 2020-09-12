@@ -1,6 +1,12 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
+import JumbotronComp from "../../components/Jumbotron";
 
-function SavedPage() {}
+function SavedPage() {
+	return (
+		<div>
+			<JumbotronComp />
+		</div>
+	);
+}
 
 export default SavedPage;

@@ -1,6 +1,14 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
+import SearchComp from "../../components/SearchComp";
+import JumbotronComp from "../../components/Jumbotron"
 
-function SearchPage() {}
+function SearchPage() {
+	return (
+		<div>
+			<JumbotronComp />
+			<SearchComp />
+		</div>
+	);
+}
 
 export default SearchPage;
