@@ -11,6 +11,7 @@
 - [Description](#description)
 - [Links for Submission Items](#links-for-submission-items)
 - [Assignment Scope](#assignment-scope)
+- [New CSS Library](#new-css-library)
 - [Installation](#installation)
 - [Final Output](#final-output)
 
@@ -19,6 +20,8 @@
 ## Description
 
 This Google Books React-Based Search App is a MERN web application that will allow users to search and save Google Books buy using the Google Books API. Since this application was developed using React, as a result this application uses React components, helper functions, and lifecycle methods to query and display books based on user searches. Node.js, Express and MongoDB are also used in this appliction to allow the functionality that allows users to save books to review or purchase later.
+
+_Return to TOC - [Table of Contents](#table-of-contents)_
 
 ---
 
@@ -29,6 +32,8 @@ Link to GitHub Repo - [ttps://github.com/KEDuran/Google-Books-React-Search](http
 Link to deployed application on Heroku - [https://google-books-react-search-ked.herokuapp.com/](https://google-books-react-search-ked.herokuapp.com/)
 
 Link to Portfolio to confirm assignment addition - [https://portfolio-react-ked.herokuapp.com/](https://portfolio-react-ked.herokuapp.com/)
+
+_Return to TOC - [Table of Contents](#table-of-contents)_
 
 ---
 
@@ -69,6 +74,8 @@ Here is a summar of the minimum requirements specified for this application:
   - `/api/books/:id` (delete) - Will be used to delete a book from the database by Mongo `_id`.
   - `*` (get) - Will load your single HTML page in `client/build/index.html`.
 
+_Return to TOC - [Table of Contents](#table-of-contents)_
+
 ---
 
 ## New CSS Library
@@ -76,6 +83,8 @@ Here is a summar of the minimum requirements specified for this application:
 I took the opportunity to practice using another CSS library outside of Bootstrap. For this assignment, I used Chakra for the frontend design of the application. Chakra is a CSS library that is compatible with the React component structure.
 
 Please click on the following link to reference the Chakra documentation - [https://chakra-ui.com/](https://chakra-ui.com/).
+
+_Return to TOC - [Table of Contents](#table-of-contents)_
 
 ---
 
@@ -95,6 +104,8 @@ All NPM packages needed for this application are already listed as dependencies 
 
 After all required dependencies have been installed using the instructions in the Installation Instructions section, run the command `npm start` in you the terminal under the root directory in order to launch the application.
 
+_Return to TOC - [Table of Contents](#table-of-contents)_
+
 ---
 
 ## Final Output
@@ -102,3 +113,5 @@ After all required dependencies have been installed using the instructions in th
 I have included a brief demo recording to show the application's functionality and responsiveness. The web application's deployed link on Heroku is the source URL for this recording.
 
 Link to Demo Recording - `Link will be included after development is complete`
+
+_Return to TOC - [Table of Contents](#table-of-contents)_
