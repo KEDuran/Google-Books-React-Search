@@ -6,9 +6,9 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
-	root: {
+	link: {
 		color: "white",
-        padding: "0px 15px 0px 15px",
+		padding: "0px 15px 0px 15px",
 	},
 });
 
@@ -17,14 +17,14 @@ function Navbar() {
 	const preventDefault = (event) => event.preventDefault();
 	return (
 		<AppBar position="static">
-			<Toolbar>
+			<Toolbar className={classes.blue}>
 				<Typography variant="h6" className={classes.title}>
 					Google Books
 				</Typography>
-				<Link href="#" className={classes.root} onClick={preventDefault}>
+				<Link href="#" className={classes.link} onClick={preventDefault}>
 					Search
 				</Link>
-				<Link href="#" className={classes.root} onClick={preventDefault}>
+				<Link href="#" className={classes.link} onClick={preventDefault}>
 					Saved
 				</Link>
 			</Toolbar>
