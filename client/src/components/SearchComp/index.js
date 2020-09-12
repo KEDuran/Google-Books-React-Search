@@ -44,7 +44,7 @@ export default function SearchComp() {
 						<CardActions>
 							<TextField
 								id="outlined-search"
-								label="Enter name of book here"
+								label="Enter book here"
 								type="search"
 								variant="outlined"
 								fullWidth
