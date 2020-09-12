@@ -14,17 +14,16 @@ const useStyles = makeStyles({
 
 function Navbar() {
 	const classes = useStyles();
-	const preventDefault = (event) => event.preventDefault();
 	return (
 		<AppBar position="static">
 			<Toolbar className={classes.blue}>
 				<Typography variant="h6" className={classes.title}>
 					Google Books
 				</Typography>
-				<Link href="#" className={classes.link} onClick={preventDefault}>
+				<Link href="/" className={classes.link}>
 					Search
 				</Link>
-				<Link href="#" className={classes.link} onClick={preventDefault}>
+				<Link href="/saved" className={classes.link}>
 					Saved
 				</Link>
 			</Toolbar>
