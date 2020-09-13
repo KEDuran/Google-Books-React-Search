@@ -9,6 +9,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import "./bookClipart.png";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -20,12 +21,14 @@ const useStyles = makeStyles((theme) => ({
 		textAlign: "left",
 		color: theme.palette.text.secondary,
 	},
-	// cardWidth: {
-	// 	maxWidth: 345,
-	// },
-	// mediaHeight: {
-	// 	height: 140,
-	// },
+	card: {
+		padding: "25px",
+		background: "#e8eaf6",
+	},
+	media: {
+		height: 0,
+		paddingTop: "56.25%", // 16:9
+	},
 }));
 
 function CardComp(props) {
@@ -36,33 +39,41 @@ function CardComp(props) {
 				<Grid item xs={12}>
 					<Paper className={classes.paper}>
 						<h4>{props.sectionHeader}</h4>
-						<Card>
+						<Card className={classes.card}>
 							<CardActionArea>
-								<CardMedia
-									image="/static/images/cards/contemplative-reptile.jpg"
-									title="Contemplative Reptile"
-								/>
 								<CardContent>
 									<Typography gutterBottom variant="h5" component="h2">
-										Lizard
+										Book Title
+									</Typography>
+
+									<Typography
+										variant="body2"
+										color="textSecondary"
+										component="p"
+									>
+										Author: {props.author}
 									</Typography>
 									<Typography
 										variant="body2"
 										color="textSecondary"
 										component="p"
 									>
-										Lizards are a widespread group of squamate reptiles, with
-										over 6,000 species, ranging across all continents except
-										Antarctica
+										Description: {props.description}
 									</Typography>
 								</CardContent>
+								<CardMedia
+									className={classes.media}
+									image={require("./bookClipart.png")}
+									title="API image"
+								/>
 							</CardActionArea>
+
 							<CardActions>
 								<Button size="small" color="primary">
-									Share
+									{props.btn1}
 								</Button>
 								<Button size="small" color="primary">
-									Learn More
+									{props.btn2}
 								</Button>
 							</CardActions>
 						</Card>

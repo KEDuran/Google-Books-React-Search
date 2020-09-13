@@ -8,7 +8,7 @@ function SearchPage() {
 		<div>
 			<JumbotronComp />
 			<SearchComp />
-			<CardComp />
+			<CardComp sectionHeader="Results" btn1="View" btn2="Save"/>
 		</div>
 	);
 }
