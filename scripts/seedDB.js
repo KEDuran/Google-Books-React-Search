@@ -2,7 +2,10 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks", {
+	useNewUrlParser: true,
+	useFindAndModify: false,
+});
 
 // the content below will seed the Book collection in googlebooks database
 
