@@ -37,7 +37,7 @@ export default function SearchComp() {
 				<Paper className={classes.paper}>
 					<Card className={classes.card}>
 						<CardContent>
-							<Typography variant="body3" component="p">
+							<Typography variant="h5" component="h2">
 								Search for Book
 							</Typography>
 						</CardContent>
