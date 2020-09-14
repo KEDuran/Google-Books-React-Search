@@ -3,23 +3,22 @@ module.exports = {
 	// Used to pull all saved books from Book collection
 	findAll: function (req, res) {
 		var axios = require("axios");
+		// variable to store user input
 		const searchQuery = req.query.title;
+		// variable for the main api endpoint
 		var config = {
 			method: "get",
-			url: `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}=${process.env.API_KEY}`,
+			url: `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&key=${process.env.API_KEY}&maxResults=7`,
 			headers: {},
 		};
 
 		axios(config)
 			.then(function (response) {
-				console.log(JSON.stringify(response.data));
+				// console.log(JSON.stringify(response.data));
+				res.json(response.data);
 			})
 			.catch(function (error) {
 				console.log(error);
 			});
-
-		db.Book.find(req.query)
-			.then((dbModel) => res.json(dbModel))
-			.catch((err) => res.status(422).json(err));
 	},
 };
