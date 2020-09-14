@@ -10,6 +10,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import "./bookClipart.png";
+import booksController from "../../../../controllers/booksController";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -39,44 +40,46 @@ function CardComp(props) {
 				<Grid item xs={12}>
 					<Paper className={classes.paper}>
 						<h4>{props.sectionHeader}</h4>
-						<Card className={classes.card}>
-							<CardActionArea>
-								<CardContent>
-									<Typography gutterBottom variant="h5" component="h2">
-										Book Title
-									</Typography>
+						{/* mapping books collection data to cards */}
+						{props.books.map((book) => (
+							<Card className={classes.card}>
+								<CardActionArea>
+									<CardContent>
+										<Typography gutterBottom variant="h5" component="h2">
+											{book.title}
+										</Typography>
 
-									<Typography
-										variant="body2"
-										color="textSecondary"
-										component="p"
-									>
-										Author: {props.author}
-									</Typography>
-									<Typography
-										variant="body2"
-										color="textSecondary"
-										component="p"
-									>
-										Description: {props.description}
-									</Typography>
-								</CardContent>
-								<CardMedia
-									className={classes.media}
-									image={require("./bookClipart.png")}
-									title="API image"
-								/>
-							</CardActionArea>
-
-							<CardActions>
-								<Button size="small" color="primary">
-									{props.btn1}
-								</Button>
-								<Button size="small" color="primary">
-									{props.btn2}
-								</Button>
-							</CardActions>
-						</Card>
+										<Typography
+											variant="body2"
+											color="textSecondary"
+											component="p"
+										>
+											Author: {book.authors}
+										</Typography>
+										<Typography
+											variant="body2"
+											color="textSecondary"
+											component="p"
+										>
+											Description: {book.description}
+										</Typography>
+									</CardContent>
+									<CardMedia
+										className={classes.media}
+										image={require(book.image)}
+										title="API image"
+									/>
+								</CardActionArea>
+								<CardActions>
+									<Button href={book.link} size="small" color="primary">
+										{props.btn1}
+									</Button>
+									<Button size="small" color="primary">
+										{props.btn2}
+									</Button>
+								</CardActions>
+							</Card>
+						))}
 					</Paper>
 				</Grid>
 			</Grid>

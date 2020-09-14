@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import JumbotronComp from "../../components/Jumbotron";
 import CardComp from "../../components/CardComp";
+import API from "../../utils/API";
 
 function SavedPage() {
 	// Setting component's initial state
@@ -22,7 +23,12 @@ function SavedPage() {
 	return (
 		<div>
 			<JumbotronComp />
-			<CardComp sectionHeader="Saved Books" btn1="View" btn2="Delete" />
+			<CardComp
+				sectionHeader="Saved Books"
+				btn1="View"
+				btn2="Delete"
+				books={books}
+			/>
 		</div>
 	);
 }
