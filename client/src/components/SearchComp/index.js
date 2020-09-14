@@ -38,6 +38,17 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SearchComp(props) {
 	const classes = useStyles();
+	// Setting component's initial state
+	const [books, setBooks] = useState([]);
+	const [search, setSearch] = useState("");
+
+	// Loads all searched books and sets them to books
+	function searchBooks(title) {
+		alert(title);
+		API.searchBook(title)
+			.then((res) => setBooks(res.data))
+			.catch((err) => console.log(err));
+	}
 
 	return (
 		<div className={classes.root}>
@@ -58,10 +69,15 @@ export default function SearchComp(props) {
 								variant="outlined"
 								fullWidth
 								className={classes.inputColor}
+								onChange={(e) => setSearch(e.target.value)}
 							/>
 						</CardActions>
 						<CardActions>
-							<Button variant="contained" color="primary">
+							<Button
+								onClick={() => searchBooks(search)}
+								variant="contained"
+								color="primary"
+							>
 								Search
 							</Button>
 						</CardActions>
@@ -70,7 +86,6 @@ export default function SearchComp(props) {
 				{/* This is for the search results */}
 				<Paper className={classes.paper}>
 					<h4>{props.sectionHeader}</h4>
-
 					<Card className={classes.card}>
 						<CardActionArea>
 							<CardContent>
