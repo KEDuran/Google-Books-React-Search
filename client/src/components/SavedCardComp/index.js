@@ -27,8 +27,8 @@ const useStyles = makeStyles((theme) => ({
 		background: "#e8eaf6",
 	},
 	media: {
-		width: "300px",
-		height: "300px",
+		width: "150px",
+		height: "150px",
 	},
 }));
 
@@ -78,6 +78,7 @@ function SavedCardComp(props) {
 										>
 											{book.authors}
 										</Typography>
+
 										<Typography
 											variant="body2"
 											color="textSecondary"
@@ -85,12 +86,12 @@ function SavedCardComp(props) {
 										>
 											{book.description}
 										</Typography>
+										<CardMedia
+											className={classes.media}
+											image={book.image}
+											title="API image"
+										/>
 									</CardContent>
-									<CardMedia
-										className={classes.media}
-										image={book.image}
-										title="API image"
-									/>
 								</CardActionArea>
 								<CardActions>
 									<Button href={book.link} size="small" color="primary">
