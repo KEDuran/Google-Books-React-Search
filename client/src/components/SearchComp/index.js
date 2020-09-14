@@ -121,7 +121,19 @@ export default function SearchComp(props) {
 								>
 									{props.btn1}
 								</Button>
-								<Button size="small" color="primary">
+								<Button
+									onClick={() =>
+										API.saveBook({
+											title: book.volumeInfo.title,
+											authors: book.volumeInfo.authors[0],
+											description: book.volumeInfo.description,
+											image: book.volumeInfo.imageLinks.smallThumbnail,
+											link: book.volumeInfo.infoLink,
+										})
+									}
+									size="small"
+									color="primary"
+								>
 									{props.btn2}
 								</Button>
 							</CardActions>
