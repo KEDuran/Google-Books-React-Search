@@ -112,6 +112,6 @@ _Return to TOC - [Table of Contents](#table-of-contents)_
 
 I have included a brief demo recording to show the application's functionality and responsiveness. The web application's deployed link on Heroku is the source URL for this recording.
 
-Link to Demo Recording - `Link will be included after development is complete`
+Link to Demo Recording - [https://drive.google.com/file/d/1uCWxluhvfPR_048mSyzd55AFgsNG9tJC/view?usp=sharing](https://drive.google.com/file/d/1uCWxluhvfPR_048mSyzd55AFgsNG9tJC/view?usp=sharing)
 
 _Return to TOC - [Table of Contents](#table-of-contents)_
