@@ -104,6 +104,7 @@ export default function SearchComp(props) {
 				</Paper>
 				{/* This is for the search results */}
 				<Paper className={classes.paper}>
+					<h4>Search Results Populate Here</h4>
 					{books.map((book) => (
 						<Card className={classes.card}>
 							<CardActionArea>
