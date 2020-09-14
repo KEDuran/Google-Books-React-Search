@@ -6,7 +6,7 @@ function SearchPage() {
 	return (
 		<div>
 			<JumbotronComp />
-			<SearchComp btn1="View" btn2="Save"/>
+			<SearchComp  btn1="View" btn2="Save"/>
 		</div>
 	);
 }

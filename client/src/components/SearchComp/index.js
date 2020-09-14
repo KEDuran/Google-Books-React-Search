@@ -44,9 +44,8 @@ export default function SearchComp(props) {
 
 	// Loads all searched books and sets them to books
 	function searchBooks(title) {
-		alert(title);
 		API.searchBook(title)
-			.then((res) => setBooks(res.data))
+			.then((res) => setBooks(res.data.items))
 			.catch((err) => console.log(err));
 	}
 
@@ -85,36 +84,49 @@ export default function SearchComp(props) {
 				</Paper>
 				{/* This is for the search results */}
 				<Paper className={classes.paper}>
-					<h4>{props.sectionHeader}</h4>
-					<Card className={classes.card}>
-						<CardActionArea>
-							<CardContent>
-								<Typography gutterBottom variant="h5" component="h2">
-									{props.title}
-								</Typography>
+					{books.map((book) => (
+						<Card className={classes.card}>
+							<CardActionArea>
+								<CardContent>
+									<Typography gutterBottom variant="h5" component="h2">
+										{book.volumeInfo.title}
+									</Typography>
 
-								<Typography variant="body2" color="textSecondary" component="p">
-									{props.authors}
-								</Typography>
-								<Typography variant="body2" color="textSecondary" component="p">
-									{props.description}
-								</Typography>
-							</CardContent>
-							<CardMedia
-								className={classes.media}
-								image={require("./bookClipart.png")}
-								title="API image"
-							/>
-						</CardActionArea>
-						<CardActions>
-							<Button href={props.link} size="small" color="primary">
-								{props.btn1}
-							</Button>
-							<Button size="small" color="primary">
-								{props.btn2}
-							</Button>
-						</CardActions>
-					</Card>
+									<Typography
+										variant="body2"
+										color="textSecondary"
+										component="p"
+									>
+										{book.volumeInfo.authors[0]}
+									</Typography>
+									<Typography
+										variant="body2"
+										color="textSecondary"
+										component="p"
+									>
+										{book.volumeInfo.description}
+									</Typography>
+								</CardContent>
+								<CardMedia
+									className={classes.media}
+									image={book.volumeInfo.imageLinks.smallThumbnail}
+									title="API image"
+								/>
+							</CardActionArea>
+							<CardActions>
+								<Button
+									href={book.volumeInfo.infoLink}
+									size="small"
+									color="primary"
+								>
+									{props.btn1}
+								</Button>
+								<Button size="small" color="primary">
+									{props.btn2}
+								</Button>
+							</CardActions>
+						</Card>
+					))}
 				</Paper>
 			</Grid>
 		</div>
