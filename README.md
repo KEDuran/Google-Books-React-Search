@@ -1,15 +1,13 @@
 # Assignment 21 - Google Books React-Based Search App
 
-![react](https://img.shields.io/badge/library-react.js-purple/?style=plastic&logo=react)
-![GitHub followers](https://img.shields.io/github/followers/KEDuran?logo=GitHub&style=plastic)
-![GitHub language count](https://img.shields.io/github/languages/count/KEDuran/employee_directory?color=orange&logo=GitHub&style=plastic)
+![react](https://img.shields.io/badge/library-react.js-purple/?style=flat&logo=react)
+![GitHub followers](https://img.shields.io/github/followers/KEDuran?logo=GitHub&style=flat)
+![GitHub language count](https://img.shields.io/github/languages/count/KEDuran/employee_directory?color=orange&logo=GitHub&style=flat)
 ![npm](https://img.shields.io/npm/v/axios?color=yellow&label=axios&logo=NPM)
 ![npm](https://img.shields.io/npm/v/express?color=purple&label=express&logo=NPM)
 ![npm](https://img.shields.io/npm/v/mongoose?color=red&label=mongoose&logo=NPM)
 ![npm](https://img.shields.io/npm/v/dotenv?color=pink&label=dotenv&logo=NPM)
-![npm](https://img.shields.io/npm/v/concurrently?color=brown&label=concurrently&logo=NPM)
 ![npm](https://img.shields.io/npm/v/morgan?color=light&label=morgan&logo=NPM)
-![npm](https://img.shields.io/npm/v/if-env?color=yellowgreen&label=if-env&logo=NPM)
 
 ---
 
