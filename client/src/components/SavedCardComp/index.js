@@ -50,6 +50,13 @@ function SavedCardComp(props) {
 			.catch((err) => console.log(err));
 	}
 
+	// Deletes a book from the database with a given id, then reloads books from the db
+	function deleteBook(id) {
+		API.deleteBook(id)
+			.then((res) => loadBooks())
+			.catch((err) => console.log(err));
+	}
+
 	return (
 		<div className={classes.root}>
 			<Grid container spacing={3}>
@@ -90,7 +97,11 @@ function SavedCardComp(props) {
 									<Button href={book.link} size="small" color="primary">
 										{props.btn1}
 									</Button>
-									<Button size="small" color="primary">
+									<Button
+										onClick={() => deleteBook(book._id)}
+										size="small"
+										color="primary"
+									>
 										{props.btn2}
 									</Button>
 								</CardActions>
