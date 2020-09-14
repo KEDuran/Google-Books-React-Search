@@ -1,12 +1,13 @@
 import React from "react";
 import JumbotronComp from "../../components/Jumbotron";
-import CardComp from "../../components/CardComp";
+import SavedCardComp from "../../components/SavedCardComp";
 
 function SavedPage() {
+	// Returns the components for the SavePage
 	return (
 		<div>
 			<JumbotronComp />
-			<CardComp sectionHeader="Saved Books" btn1="View" btn2="Delete" />
+			<SavedCardComp sectionHeader="Saved Books" btn1="View" btn2="Delete" />
 		</div>
 	);
 }

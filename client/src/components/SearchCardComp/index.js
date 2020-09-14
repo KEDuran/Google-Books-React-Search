@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
@@ -10,6 +10,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import "./bookClipart.png";
+import API from "../../utils/API";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -26,24 +27,28 @@ const useStyles = makeStyles((theme) => ({
 		background: "#e8eaf6",
 	},
 	media: {
-		height: 0,
-		paddingTop: "56.25%", // 16:9
+		
+		padding: "5px",
+		width: "150px",
+		height: "200px",
 	},
 }));
 
-function CardComp(props) {
+function SearchCardComp(props) {
 	const classes = useStyles();
+
 	return (
 		<div className={classes.root}>
 			<Grid container spacing={3}>
 				<Grid item xs={12}>
 					<Paper className={classes.paper}>
 						<h4>{props.sectionHeader}</h4>
+
 						<Card className={classes.card}>
 							<CardActionArea>
 								<CardContent>
 									<Typography gutterBottom variant="h5" component="h2">
-										Book Title
+										{props.title}
 									</Typography>
 
 									<Typography
@@ -51,14 +56,14 @@ function CardComp(props) {
 										color="textSecondary"
 										component="p"
 									>
-										Author: {props.author}
+										{props.authors}
 									</Typography>
 									<Typography
 										variant="body2"
 										color="textSecondary"
 										component="p"
 									>
-										Description: {props.description}
+										{props.description}
 									</Typography>
 								</CardContent>
 								<CardMedia
@@ -67,9 +72,8 @@ function CardComp(props) {
 									title="API image"
 								/>
 							</CardActionArea>
-
 							<CardActions>
-								<Button size="small" color="primary">
+								<Button href={props.link} size="small" color="primary">
 									{props.btn1}
 								</Button>
 								<Button size="small" color="primary">
@@ -84,4 +88,4 @@ function CardComp(props) {
 	);
 }
 
-export default CardComp;
+export default SearchCardComp;
