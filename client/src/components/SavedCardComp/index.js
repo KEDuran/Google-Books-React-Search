@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
@@ -10,7 +10,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import "./bookClipart.png";
-import booksController from "../../../../controllers/booksController";
+import API from "../../utils/API";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -27,13 +27,29 @@ const useStyles = makeStyles((theme) => ({
 		background: "#e8eaf6",
 	},
 	media: {
-		height: 0,
-		paddingTop: "56.25%", // 16:9
+		width: "300px",
+		height: "300px",
 	},
 }));
 
-function CardComp(props) {
+function SavedCardComp(props) {
 	const classes = useStyles();
+	// Setting component's initial state
+	const [books, setBooks] = useState([]);
+	const [formObject, setFormObject] = useState({});
+
+	// Load all books and store them with setBooks
+	useEffect(() => {
+		loadBooks();
+	}, []);
+
+	// Loads all books and sets them to books
+	function loadBooks() {
+		API.getBooks()
+			.then((res) => setBooks(res.data))
+			.catch((err) => console.log(err));
+	}
+
 	return (
 		<div className={classes.root}>
 			<Grid container spacing={3}>
@@ -41,7 +57,7 @@ function CardComp(props) {
 					<Paper className={classes.paper}>
 						<h4>{props.sectionHeader}</h4>
 						{/* mapping books collection data to cards */}
-						{props.books.map((book) => (
+						{books.map((book) => (
 							<Card className={classes.card}>
 								<CardActionArea>
 									<CardContent>
@@ -54,19 +70,19 @@ function CardComp(props) {
 											color="textSecondary"
 											component="p"
 										>
-											Author: {book.authors}
+											{book.authors}
 										</Typography>
 										<Typography
 											variant="body2"
 											color="textSecondary"
 											component="p"
 										>
-											Description: {book.description}
+											{book.description}
 										</Typography>
 									</CardContent>
 									<CardMedia
 										className={classes.media}
-										image={require(book.image)}
+										image={book.image}
 										title="API image"
 									/>
 								</CardActionArea>
@@ -87,4 +103,4 @@ function CardComp(props) {
 	);
 }
 
-export default CardComp;
+export default SavedCardComp;

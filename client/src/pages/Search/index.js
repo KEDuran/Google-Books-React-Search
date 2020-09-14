@@ -1,14 +1,14 @@
 import React from "react";
 import SearchComp from "../../components/SearchComp";
 import JumbotronComp from "../../components/Jumbotron";
-import CardComp from "../../components/CardComp";
+import SearchCardComp from "../../components/SearchCardComp";
 
 function SearchPage() {
 	return (
 		<div>
 			<JumbotronComp />
 			<SearchComp />
-			<CardComp sectionHeader="Results" btn1="View" btn2="Save"/>
+			<SearchCardComp sectionHeader="Results" btn1="View" btn2="Save" />
 		</div>
 	);
 }
