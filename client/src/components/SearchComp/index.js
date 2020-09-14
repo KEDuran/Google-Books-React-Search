@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -49,6 +49,26 @@ export default function SearchComp(props) {
 			.catch((err) => console.log(err));
 	}
 
+	// function to save books with no authors listed
+	function missingAuthor(book) {
+		var authors = "";
+		if (book.volumeInfo.authors) {
+			authors = book.volumeInfo.authors[0];
+		} else {
+			authors = "No authors listed";
+		}
+
+		API.saveBook({
+			title: book.volumeInfo.title,
+			authors: authors,
+			description: book.volumeInfo.description,
+			image: book.volumeInfo.imageLinks.smallThumbnail,
+			link: book.volumeInfo.infoLink,
+		}).then(() => {
+			alert("Your book has been saved");
+		});
+	}
+
 	return (
 		<div className={classes.root}>
 			<Grid item xs={12}>
@@ -97,7 +117,9 @@ export default function SearchComp(props) {
 										color="textSecondary"
 										component="p"
 									>
-										{book.volumeInfo.authors[0]}
+										{book.volumeInfo.authors
+											? book.volumeInfo.authors[0]
+											: "No author listed"}
 									</Typography>
 									<Typography
 										variant="body2"
@@ -122,15 +144,7 @@ export default function SearchComp(props) {
 									{props.btn1}
 								</Button>
 								<Button
-									onClick={() =>
-										API.saveBook({
-											title: book.volumeInfo.title,
-											authors: book.volumeInfo.authors[0],
-											description: book.volumeInfo.description,
-											image: book.volumeInfo.imageLinks.smallThumbnail,
-											link: book.volumeInfo.infoLink,
-										})
-									}
+									onClick={() => missingAuthor(book)}
 									size="small"
 									color="primary"
 								>
