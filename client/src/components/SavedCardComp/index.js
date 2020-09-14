@@ -36,7 +36,6 @@ function SavedCardComp(props) {
 	const classes = useStyles();
 	// Setting component's initial state
 	const [books, setBooks] = useState([]);
-	const [formObject, setFormObject] = useState({});
 
 	// Load all books and store them with setBooks
 	useEffect(() => {
